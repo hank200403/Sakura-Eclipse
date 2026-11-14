@@ -1,0 +1,61 @@
+name: "🐛 Bug Report / BUG 回報"
+description: "Report a bug, crash, or unexpected behavior. / 回報模組錯誤、遊戲崩潰或異常行為。"
+title: "[Bug] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check for existing reports first. Report only one issue per submission.
+        請先搜尋是否已有相同回報。每張表單只回報一個問題。
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: "Mod Version / 模組版本"
+      placeholder: "e.g. 1.1.0 / 例如 1.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: minecraft-version
+    attributes:
+      label: "Minecraft Version / Minecraft 版本"
+      placeholder: "e.g. 26.3 / 例如 26.3"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Game Environment / 遊玩環境"
+      options:
+        - "Singleplayer / 單人世界"
+        - "LAN / 區域網路"
+        - "Multiplayer Server / 多人伺服器"
+        - "During Launch / 啟動時發生"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "What Happened? / 問題描述"
+      description: "Describe what happened and what you expected to happen. / 請說明實際發生了什麼，以及你原本預期的結果。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to Reproduce / 重現步驟"
+      description: "List the steps in order. If you are unsure how to reproduce the issue, describe what you did just before it occurred. / 請依序列出操作。如果不確定如何重現，請描述出問題前最後做了什麼。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "Additional Information / 補充資料"
+      description: "You can include screenshots, latest.log, a crash report, your Fabric Loader version, or a list of other mods. Remove personal information before uploading. / 可附截圖、latest.log、崩潰報告、Fabric Loader 版本或其他模組清單。上傳前請移除個人資料。"
